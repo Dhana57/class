@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Bank Account</h1>
+
+        <!-- Account Information -->
+        <div class="card mb-4">
+            <div class="card-header">Account Information</div>
+            <div class="card-body">
+                <p>
+                    <input type="number" class="form-control" id="accountNumberInput" placeholder="Enter account no (1-5)" required>
+                </p>
+                <p><span id="Messages"></span></p>
+                <button type="button" id="searchAccountBtn" class="btn btn-primary">Search Account</button>
+                <p><strong>Account Number:</strong> <span id="accountNumber"></span></p>
+                <p><strong>Account Holder:</strong> <span id="accountHolder"></span></p>
+                <p><strong>Balance:</strong> ₹<span id="balance"></span></p>
+            </div>
+        </div>
+
+        <!-- Deposit and Withdraw Form -->
+        <div class="card mb-4">
+            <div class="card-header">Manage Funds</div>
+            <div class="card-body">
+                <form id="transactionForm">
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Amount</label>
+                        <input type="number" class="form-control" id="amount" placeholder="Enter amount" required>
+                    </div>
+                    <button type="button" id="depositBtn" class="btn btn-success">Deposit</button>
+                    <button type="button" id="withdrawBtn" class="btn btn-danger">Withdraw</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Messages -->
+        <div id="message" class="alert d-none"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./scripit.js"></script>
+</body>
+</html>
